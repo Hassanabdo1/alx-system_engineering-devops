@@ -1,9 +1,2 @@
 #!/bin/bash
-WATER="water"
-STIR="stir."
-encoded_water=$(echo $WATER | tr water 01234)
-encoded_stir=$(echo $STIR | tr stir. 01234)
-combined_code=$((5#$encoded_water + 5#$encoded_stir))
-encoded_combined_code=$(echo $combined_code | tr 01234 'behlnort')
-echo $encoded_combined_code
-
+printf "%o\n" $(( $((5#(echo $WATER | tr water 01234))) + $((5#(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestchol
