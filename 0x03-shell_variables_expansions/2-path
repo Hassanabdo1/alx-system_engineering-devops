@@ -1,2 +1,2 @@
 #!/bin/bash
-export PATH="$PATH:https:/action"
+export PATH=$PATH:/action
