@@ -1,4 +1,4 @@
-# Creates a file
+reates a file
 file { '/tmp/school':
   ensure  => file,
   path    => '/tmp/school',
