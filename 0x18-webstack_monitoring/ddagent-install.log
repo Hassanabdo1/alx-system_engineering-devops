@@ -1,0 +1,121 @@
+[34m
+* Datadog Agent 7 install script v1.31.8
+[0m
+[34m
+* Installing apt-transport-https, curl and gnupg
+[0m
+Hit:1 http://archive.ubuntu.com/ubuntu jammy InRelease
+Get:2 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:3 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:4 https://deb.nodesource.com/node_14.x jammy InRelease
+Get:5 https://download.docker.com/linux/ubuntu jammy InRelease [48.8 kB]
+Get:6 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1476 kB]
+Get:7 https://download.docker.com/linux/ubuntu jammy/stable amd64 Packages [33.7 kB]
+Get:8 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+Get:9 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1687 kB]
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [254 kB]
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [856 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [165 kB]
+Get:13 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [313 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1083 kB]
+Get:15 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [250 kB]
+Get:16 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43.0 kB]
+Get:17 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse Translation-en [10.7 kB]
+Get:18 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.1 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [27.2 kB]
+Fetched 6699 kB in 44s (151 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (7.81.0-1ubuntu1.16).
+gnupg is already the newest version (2.2.27-3ubuntu2.1).
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 21 not upgraded.
+Need to get 1510 B of archives.
+After this operation, 170 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 apt-transport-https all 2.4.12 [1510 B]
+Fetched 1510 B in 0s (3865 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 37941 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.4.12_all.deb ...
+Unpacking apt-transport-https (2.4.12) ...
+Setting up apt-transport-https (2.4.12) ...
+[34m
+* Installing APT package sources for Datadog
+[0m
+gpg: directory '/root/.gnupg' created
+gpg: /root/.gnupg/trustdb.gpg: trustdb created
+gpg: key 32637D44F14F620E: public key "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key E6266D4AC0962C7D: public key "Datadog, Inc. APT key (2023-04-20) (APT key) <package+aptkey@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+gpg: key 32637D44F14F620E: "Datadog, Inc. Master key (2020-09-08) <package+masterkey@datadoghq.com>" not changed
+gpg: Total number processed: 1
+gpg:              unchanged: 1
+gpg: key D3A80E30382E94DE: public key "Datadog, Inc <package@datadoghq.com>" imported
+gpg: Total number processed: 1
+gpg:               imported: 1
+Ign:1 https://apt.datadoghq.com stable InRelease
+Get:2 https://apt.datadoghq.com stable Release [26.0 kB]
+Get:3 https://apt.datadoghq.com stable Release.gpg [801 B]
+Get:4 https://apt.datadoghq.com stable/7 all Packages [1073 B]
+Get:5 https://apt.datadoghq.com stable/7 amd64 Packages [70.9 kB]
+Fetched 98.7 kB in 2s (42.4 kB/s)
+Reading package lists...
+  [33mInstalling package(s): datadog-agent datadog-signing-keys
+[0m
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  datadog-agent datadog-signing-keys
+0 upgraded, 2 newly installed, 0 to remove and 21 not upgraded.
+Need to get 277 MB of archives.
+After this operation, 1266 MB of additional disk space will be used.
+Get:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1 [277 MB]
+Ign:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Ign:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Ign:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Ign:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Ign:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Err:1 https://apt.datadoghq.com stable/7 amd64 datadog-agent amd64 1:7.54.0-1
+  Connection timed out [IP: 143.204.9.125 443]
+Ign:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+Err:2 https://apt.datadoghq.com stable/7 amd64 datadog-signing-keys all 1:1.3.1-1
+  Could not connect to apt.datadoghq.com:443 (143.204.9.125). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4600:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.45). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.73). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:8a00:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.111). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:e800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:d000:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:1e00:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:9800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4e00:e:4acf:9bc0:93a1). - connect (111: Connection refused) [IP: 143.204.9.125 443]
+W: --force-yes is deprecated, use one of the options starting with --allow instead.
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-agent_7.54.0-1_amd64.deb  Connection timed out [IP: 143.204.9.125 443]
+E: Failed to fetch https://apt.datadoghq.com/pool/d/da/datadog-signing-keys_1.3.1-1_all.deb  Could not connect to apt.datadoghq.com:443 (143.204.9.125). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4600:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.45). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.73). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:8a00:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (143.204.9.111). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:e800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:d000:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:1e00:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:9800:e:4acf:9bc0:93a1). - connect (111: Connection refused) Could not connect to apt.datadoghq.com:443 (2600:9000:20dc:4e00:e:4acf:9bc0:93a1). - connect (111: Connection refused) [IP: 143.204.9.125 443]
+E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?
+[31mERROR
+Failed to install one or more packages, sometimes it may be
+due to another APT source failing. See the logs above to
+determine the cause.
+If the cause is unclear, please contact Datadog support.
+*****
+
+It looks like you hit an issue when trying to install the Datadog Agent.
+
+    
+
+Troubleshooting and basic usage information for the Datadog Agent are available at:
+
+    https://docs.datadoghq.com/agent/basic_agent_usage/
+[0m
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+curl: (6) Could not resolve host: instrumentation-telemetry-intake.datadoghq.com
+Unable to send telemetry
+Do you want to send a failure report to Datadog (including ddagent-install.log)? (y/[n]) Enter an email address so we can follow up: 
